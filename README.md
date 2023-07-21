@@ -1,8 +1,11 @@
 # Reset Password LDAP LCC - Backend
 
+Esse repositório contém o código-fonte de uma aplicação web que altera a senha de usuários em um servidor LDAP.
+
 ## Importante
 
 - É necessário um arquivo .env com uma variável "KEY". Ela vai ser usada por questões de segurança. Então na requisição, inclua um campo "key" no JSON do corpo da requisição.
+- Além da KEY, inclua também a variável "LDAP_PASS" com a senha do seu servidor LDAP.
 
 ## Run
 
