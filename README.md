@@ -4,8 +4,8 @@ Esse repositório contém o código-fonte de uma aplicação web que altera a se
 
 ## Importante
 
-- É necessário um arquivo .env com uma variável "KEY". Ela vai ser usada por questões de segurança. Então na requisição, inclua um campo "key" no JSON do corpo da requisição.
-- Além da KEY, inclua também a variável "LDAP_PASS" com a senha do seu servidor LDAP.
+- É necessário um arquivo .env com uma variável "KEY". Ela vai ser usada por questões de segurança. Então, na requisição, inclua um campo "key" no JSON do corpo da requisição.
+- Além da KEY, inclua no arquivo .env a variável "LDAP_PASS" com a senha do seu servidor LDAP.
 - Quando um usuário tenta alterar sua senha, com sucesso ou sem sucesso, um log é gerado e salvo em <code>reset.log</code>
 
 ## Run
@@ -52,4 +52,4 @@ make stop
 ```
 ## Rotas
 
-Quando a aplicação estiver rodando, você pode acessar a rota única do sistema: <code>localhost:5000/reset-password</code>. Sua requisição deve ser POST e deve incluir o email utilizado (ex: fulano.silva@ccc.ufcg.edu.br) e a KEY do arquivo .env.
+Quando a aplicação estiver rodando, você pode acessar a rota única do sistema: <code>localhost:5000/reset-password</code>. Sua requisição deve ser POST e deve incluir uma campo "email" (ex: fulano.silva@ccc.ufcg.edu.br) e uma campo "key" com o valor do arquivo .env.
